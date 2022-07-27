@@ -3,10 +3,25 @@
   <head>
     <meta charset="UTF-8">
     <title>Rock Paper Scissors! | An Odin Project Exercise</title>
-    <link rel="stylesheet" src="style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer="defer"></script>
   </head>
   <body>
-    <button id="startButton">Let's Play!</button>
+    <div class="intro">
+      <h1>Choose Your Fighter:</h1>
+    </div>
+    <div class="buttons">
+      <button id="rock">Rock</button>
+      <button id="paper">Paper</button>
+      <button id="scissors">Scissors</button>
+    </div>
+    <div class="container">
+      <div id="outcome"></div>
+    </div>
+    <div class="container">
+      <button id="restartButton">Play Again</button>
+    </div>
+    <div class="counterContainer"></div>
+    <div id="gameOverPopup"></div>
   </body>
 </html>

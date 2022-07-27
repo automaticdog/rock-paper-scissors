@@ -1,0 +1,110 @@
+body {
+  background-color: #000;
+}
+
+h1, h2, h3, p {
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+}
+
+.intro {
+  font-size: 2.5em;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
+
+#outcome {
+  max-width: 66%;
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#outcome.active {
+  min-height: 200px;
+  border: 3px solid white;
+  border-radius: 25px;
+}
+
+#outcome p {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.buttons {
+  margin: 25px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: darkblue;
+  background-color: dodgerblue;
+  border: 3px solid #aaa;
+  border-radius: 10px;
+  min-height: 100px;
+  max-width: 300px;
+  flex-basis: 100%;
+}
+
+#restartButton, #newGame {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  font-size: 1.75em;
+  border: none;
+  border-radius: 6px;
+}
+
+.counterContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.counterContainer p {
+  margin-top: -5px;
+  font-size: 1.5em;
+  color: #666666;
+}
+
+#gameOverPopup.active{
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#gameOverPopup p {
+  text-align: center;
+  font-size: 4em;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .buttons {
+    flex-direction: column;
+  }
+  .buttons button {
+    font-size: 3em;
+    min-width: 66%;
+  }
+}
