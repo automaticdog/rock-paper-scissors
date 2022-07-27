@@ -1,10 +1,19 @@
 body {
-  background-color: #000;
+  background-color: #fff;
+}
+
+#header {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 h1, h2, h3, p {
-  color: #fff;
+  color: #d9d1ff;
   font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3 {
+  margin-top: 15px;
 }
 
 .intro {
@@ -29,13 +38,14 @@ h1, h2, h3, p {
 
 #outcome.active {
   min-height: 200px;
-  border: 3px solid white;
+  border: 3px solid #d9d1ff;
   border-radius: 25px;
 }
 
 #outcome p {
   font-size: 1.5em;
   text-align: center;
+  color: #6565d3;
 }
 
 .buttons {
@@ -51,9 +61,9 @@ h1, h2, h3, p {
   font-size: 2em;
   font-weight: bold;
   text-transform: uppercase;
-  color: darkblue;
-  background-color: dodgerblue;
-  border: 3px solid #aaa;
+  color: #6565d3;
+  background-color: #d9d1ff;
+  border: 3px solid #b4a5ff;
   border-radius: 10px;
   min-height: 100px;
   max-width: 300px;
@@ -62,9 +72,11 @@ h1, h2, h3, p {
 
 #restartButton, #newGame {
   padding: 10px 20px;
-  background-color: #fff;
-  color: #000;
+  background-color: #d9d1ff;
+  color: #6565d3;
   font-size: 1.75em;
+  font-weight: bold;
+  text-transform: uppercase;
   border: none;
   border-radius: 6px;
 }
@@ -77,13 +89,13 @@ h1, h2, h3, p {
 .counterContainer p {
   margin-top: -5px;
   font-size: 1.5em;
-  color: #666666;
+  color: #d9d1ff;
 }
 
 #gameOverPopup.active{
   height: 100vh;
   width: 100vw;
-  background-color: #000;
+  background-color: #6565d3;
   position: absolute;
   left: 0;
   top: 0;
@@ -97,6 +109,76 @@ h1, h2, h3, p {
   text-align: center;
   font-size: 4em;
   font-weight: bold;
+}
+
+.dot {height: 12px;
+width: 12px;
+background-color: #d9d1ff;
+border-radius: 100%;
+}
+
+#themePanel {
+  margin: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  float: right;
+}
+
+.colorSwatch {
+  padding: 15px;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+#sherbert .leftSwatch {
+  background-color: #ffd1c4;
+  flex-basis: 100%;
+  border-radius: 200px 0 0 200px;
+}
+
+#sherbert .rightSwatch {
+  background-color: #ed3c3c;
+  flex-basis: 100%;
+  border-radius: 0 200px 200px 0;
+}
+
+#ocean .leftSwatch {
+  background-color: #dbeeff;
+  flex-basis: 100%;
+  border-radius: 200px 0 0 200px;
+}
+
+#ocean .rightSwatch {
+  background-color: #23a59f;
+  flex-basis: 100%;
+  border-radius: 0 200px 200px 0;
+}
+
+#light .leftSwatch {
+  background-color: #fff;
+  flex-basis: 100%;
+  border-radius: 200px 0 0 200px;
+}
+
+#light .rightSwatch {
+  background-color: #d9d1ff;
+  flex-basis: 100%;
+  border-radius: 0 200px 200px 0;
+}
+
+#dark .leftSwatch {
+  background-color: #3c4f5f;
+  flex-basis: 100%;
+  border-radius: 200px 0 0 200px;
+}
+
+#dark .rightSwatch {
+  background-color: #02172a;
+  flex-basis: 100%;
+  border-radius: 0 200px 200px 0;
 }
 
 @media screen and (max-width: 600px) {

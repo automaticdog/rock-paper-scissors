@@ -1,3 +1,11 @@
+// defines colorways
+
+let lightColor = '#fff';
+let midColor = '#b3a5ff';
+let darkColor = '#6565d3';
+
+const headerText = document.querySelector('.intro h1');
+
 const choice = ['rock', 'paper', 'scissors'];
 
 function computerPlay() {
@@ -36,7 +44,7 @@ function disableButtons() {
 // contains game logic
 rockBtn.addEventListener('click', () => {
   counter += 1;
-  rockBtn.style.backgroundColor = '#005bb4';
+  rockBtn.style.backgroundColor = midColor;
   const computerSelection = computerPlay();
   let playerSelection = 'rock';
 
@@ -62,7 +70,7 @@ rockBtn.addEventListener('click', () => {
 
 paperBtn.addEventListener('click', () => {
   counter += 1;
-  paperBtn.style.backgroundColor = '#005bb4';
+  paperBtn.style.backgroundColor = midColor;
   let computerSelection = computerPlay();
   let playerSelection = 'paper';
 
@@ -88,7 +96,7 @@ paperBtn.addEventListener('click', () => {
 
 scissorsBtn.addEventListener('click', () => {
   counter += 1;
-  scissorsBtn.style.backgroundColor = '#005bb4';
+  scissorsBtn.style.backgroundColor = midColor;
   let computerSelection = computerPlay();
   let playerSelection = 'scissors';
 
@@ -117,7 +125,7 @@ const restart = document.getElementById('restartButton');
 const container = document.getElementsByClassName('container');
 
 restart.addEventListener('click', () => {
-  buttons.forEach(button => { button.style.backgroundColor = 'dodgerblue'; });
+  buttons.forEach(button => { button.style.backgroundColor = lightColor; });
   buttons.forEach(button => { button.removeAttribute('disabled'); });
   output.textContent = '';
   output.classList.remove('active');
