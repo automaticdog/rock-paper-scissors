@@ -17,6 +17,15 @@ const rockBtn = document.getElementById('rock');
 const paperBtn = document.getElementById('paper');
 const scissorsBtn = document.getElementById('scissors');
 
+const restart = document.createElement('button')
+restart.setAttribute('id', 'restartButton');
+restart.textContent = 'Play Again';
+const container = document.getElementsByClassName('container');
+
+function insertRestartButton() {
+  document.querySelector('.container.restart').appendChild(restart);
+}
+
 let playerSelection = '';
 let computerSelection = '';
 
@@ -64,6 +73,7 @@ rockBtn.addEventListener('click', () => {
     output.appendChild(MSG);
     losses += 1;
   }
+  insertRestartButton()
   countDisplay.textContent = `${counter} games played`;
   disableButtons();
 });
@@ -90,6 +100,7 @@ paperBtn.addEventListener('click', () => {
     output.appendChild(MSG);
     losses += 1;
   }
+  insertRestartButton()
   countDisplay.textContent = `${counter} games played`;
   disableButtons();
 });
@@ -116,6 +127,7 @@ scissorsBtn.addEventListener('click', () => {
     output.appendChild(MSG);
     losses += 1;
   }
+  insertRestartButton()
   countDisplay.textContent = `${counter} games played`;
   disableButtons();
 });
@@ -130,6 +142,7 @@ function resetButtons() {
 
 restart.addEventListener('click', () => {
   resetButtons();
+  document.querySelector('.container.restart').removeChild(restart);
 });
 
 const gameOver = document.getElementById('gameOverPopup');
@@ -175,6 +188,7 @@ window.addEventListener('click', () => {
 
 newGameButton.addEventListener('click', () => {
   resetButtons();
+  document.querySelector('.container.restart').removeChild(restart);
   gameOver.classList.remove('active');
   gameOver.textContent = '';
   counter = 0;
