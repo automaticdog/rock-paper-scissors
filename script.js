@@ -121,14 +121,15 @@ scissorsBtn.addEventListener('click', () => {
 });
 // end game logic
 
-const restart = document.getElementById('restartButton');
-const container = document.getElementsByClassName('container');
-
-restart.addEventListener('click', () => {
+function resetButtons() {
   buttons.forEach(button => { button.style.backgroundColor = lightColor; });
   buttons.forEach(button => { button.removeAttribute('disabled'); });
   output.textContent = '';
   output.classList.remove('active');
+}
+
+restart.addEventListener('click', () => {
+  resetButtons();
 });
 
 const gameOver = document.getElementById('gameOverPopup');
@@ -173,6 +174,7 @@ window.addEventListener('click', () => {
 });
 
 newGameButton.addEventListener('click', () => {
+  resetButtons();
   gameOver.classList.remove('active');
   gameOver.textContent = '';
   counter = 0;

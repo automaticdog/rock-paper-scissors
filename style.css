@@ -51,6 +51,7 @@ h1, h2, h3 {
 .buttons {
   margin: 25px 50px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 50px;
@@ -62,10 +63,11 @@ h1, h2, h3 {
   font-weight: bold;
   text-transform: uppercase;
   color: #6565d3;
-  background-color: #d9d1ff;
+  background-color: #fff;
   border: 3px solid #b4a5ff;
   border-radius: 10px;
   min-height: 100px;
+  min-width: 75%;
   max-width: 300px;
   flex-basis: 100%;
 }
@@ -181,12 +183,52 @@ border-radius: 100%;
   border-radius: 0 200px 200px 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 300px) {
+  h1 {
+    font-size: 3em;
+  }
+
   .buttons {
     flex-direction: column;
   }
   .buttons button {
+    font-size: 4em;
+    min-height: 200px;
+    border-width: 9px;
+  }
+  #restartButton, #newGame {
+    padding: 0.5em 1em;
+    color: #d9d1ff;
+    background-color: #6565d3;
     font-size: 3em;
-    min-width: 66%;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 6px;
+  }
+  #newGame {
+    background-color: #d9d1ff;
+    color: #6565d3;
+  }
+  #outcome, .buttons button {
+    min-width: 85%;
+  }
+  #outcome.active {
+    background-color: #ece7ff;
+    border: 0px solid #ece7ff;
+  }
+  #outcome p {
+    font-size: 3.5em;
+    padding: 1.25em;
+  }
+  .container {
+    padding: 25px 50px;
+  }
+  .counterContainer p {
+    font-size: 2.5em;
+    padding-top: 20px;
+  }
+  #gameOverPopup p {
+    padding: 0 5%;
   }
 }
