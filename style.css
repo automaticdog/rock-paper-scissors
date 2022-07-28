@@ -25,7 +25,6 @@ h1, h2, h3 {
 .container {
   display: flex;
   justify-content: center;
-  padding: 25px;
 }
 
 #outcome {
@@ -40,10 +39,11 @@ h1, h2, h3 {
   min-height: 200px;
   border: 3px solid #d9d1ff;
   border-radius: 25px;
+  margin: 2.5em 0;
 }
 
 #outcome p {
-  font-size: 1.5em;
+  font-size: 1.25em;
   text-align: center;
   color: #6565d3;
 }
@@ -183,24 +183,26 @@ border-radius: 100%;
   border-radius: 0 200px 200px 0;
 }
 
-@media screen and (min-width: 300px) {
+@media only screen and (max-width: 800px) {
   h1 {
-    font-size: 3em;
+    font-size: 1.5em;
   }
-
   .buttons {
     flex-direction: column;
+    margin: 25px 5vw;
+    gap: 6vw;
   }
   .buttons button {
-    font-size: 4em;
-    min-height: 200px;
+    font-size: 2em;
+    min-height: 100px;
+    min-width: 300px;
     border-width: 9px;
   }
   #restartButton, #newGame {
     padding: 0.5em 1em;
     color: #d9d1ff;
     background-color: #6565d3;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: bold;
     text-transform: uppercase;
     border: none;
@@ -216,16 +218,15 @@ border-radius: 100%;
   #outcome.active {
     background-color: #ece7ff;
     border: 0px solid #ece7ff;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
   }
   #outcome p {
-    font-size: 3.5em;
-    padding: 1.25em;
-  }
-  .container {
-    padding: 25px 50px;
+    font-size: 1.5em;
+    padding: 1.5em;
   }
   .counterContainer p {
-    font-size: 2.5em;
+    font-size: 1.5em;
     padding-top: 20px;
   }
   #gameOverPopup p {
